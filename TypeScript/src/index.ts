@@ -10,8 +10,10 @@ let x: any = "Hello";
 let ids: number[] = [1, 2, 3, 4, 5];
 let arr: any[] = [1, true, "Hello"];
 
-// Tuple
+// Tuple : Tuple types allow you to express an array with a fixed number of elements
+// whose types are known, but need not be the same.
 let person: [number, string, boolean] = [1, "Brad", true];
+
 // Tuple Array
 let employee: [number, string][];
 
@@ -27,6 +29,9 @@ let pid: string | number;
 pid = "22"; // or pid = 22
 
 // Enum
+
+//You should always use enums when a variable (especially a method parameter) can only take one out of a small set of possible values. Examples would be things like type constants (contract status: "permanent", "temp", "apprentice"), or flags ("execute now", "defer execution").
+//If you use enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid constants, and you document which values are legal to use.
 enum Direction1 {
   Up,
   Down,
